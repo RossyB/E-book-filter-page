@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
 
 import { BookService } from './../../services/book.service'
 
@@ -8,14 +10,12 @@ import { BookService } from './../../services/book.service'
   styleUrls: ['./books-list.component.css']
 })
 export class BooksListComponent implements OnInit {
-  books: any;
+  books: any[] ;
 
-  constructor(private _bookService : BookService) { 
-
-  }
+  constructor(private _bookService : BookService) { }
 
   ngOnInit() {
-    this._bookService.getBooks().subscribe(response => this.books = response);;
+    this._bookService.getBooks().subscribe(response => this.books = response);
     console.log(this.books);
   }
 
