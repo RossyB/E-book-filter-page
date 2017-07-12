@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="wall">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{title}}</h2>
+                <h4>{{subtitle}}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 btn-group" data-toggle="buttons">
+                <label class="btn btn-success">
+      	          <input type="checkbox" autocomplete="off"> Фентъзи <span aria-hidden="true">&times;</span>
+                </label>
+                <label class="btn btn-success">
+                  <input type="checkbox" autocomplete="off"> Драма <span aria-hidden="true">&times;</span>
+                </label>
+                <label class="btn btn-success">
+                  <input type="checkbox" autocomplete="off"> Трилър <span aria-hidden="true">&times;</span>
+                </label>
+                <label class="btn btn-success">
+                  <input type="checkbox" autocomplete="off"> Романи <span aria-hidden="true">&times;</span>
+                </label>
+                <label class="btn btn-success">
+                  <input type="checkbox" autocomplete="off"> Художествена литература <span aria-hidden="true">&times;</span>
+                </label>
+                <label class="btn btn-success">
+                  <input type="checkbox" autocomplete="off"> Исторически <span aria-hidden="true">&times;</span>
+                </label>
+                <label class="btn btn-success">
+                  <input type="checkbox" autocomplete="off"> Научна литература <span aria-hidden="true">&times;</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="wall">
+                <h2>Цена</h2>
+                <h4>Изберете цена от до</h4>
+                <p-slider [(ngModel)]="rangeValues" [range]="true" (onSlideEnd)="handleChange($event)"></p-slider>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="wall">
+                <h2>Рейтинг</h2>
+                <h4>Изберете рейтинг</h4>
+                <p-rating [(ngModel)]="rating" (onRate)="handleRate($event)" (onCancel)="clearRate($event)"></p-rating>
+            </div>
+        </div>
+    </div>
+</div>
