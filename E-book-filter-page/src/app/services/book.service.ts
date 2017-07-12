@@ -8,8 +8,8 @@ export class BookService {
 
   constructor(private _http: Http) { }
 
-      getCars() {
-        return this._http.get('./../data/books.json')
+      getBooks() {
+        return this._http.get('./../../app/data/books.json')
             .map((res: Response) => res.json());
       }
 }
