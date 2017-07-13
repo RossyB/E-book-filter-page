@@ -1,0 +1,22 @@
+.wall {
+    background-color: #eceeef;
+    padding: 2em 1.5em;
+    margin-bottom: 1em;
+}
+
+.book-image {
+    max-height: 15rem;
+}
+
+.book-container {
+    width: 40rem;
+    padding: 2rem;
+    max-height: 24rem;
+}
+
+.book-title {
+    height: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

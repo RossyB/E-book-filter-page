@@ -1,3 +1,20 @@
-<p>
-  books-list works!
-</p>
+<div class="container-fluid">
+    <div class="wall">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{title}}</h2>
+                <h4>{{subtitle}}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="books-container">
+                <div class="col-md-2 float-left book-container" *ngFor="let book of books">
+                    <img class="book-image" src="{{book.bookImageUrl}}" alt="Card image cap">
+                    <h4 class="book-title">{{book.title}}</h4>
+                    <div>{{book.price}} лв.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

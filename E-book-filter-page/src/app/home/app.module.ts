@@ -1,11 +1,10 @@
 import { SliderModule, RatingModule } from 'primeng/primeng';
+import { BookService } from './../services/book.service';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
-import { BookService } from './../services/book.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
