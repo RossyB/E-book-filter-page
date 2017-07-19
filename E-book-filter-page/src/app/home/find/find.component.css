@@ -12,5 +12,53 @@ span {
 .wall {
     background-color: #eceeef;
     padding: 2em 1.5em;
-    margin-bottom: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+}
+
+.price-val {
+    margin-top: 10px;
+    font-weight: bold;
+    color: rgb(92, 184, 92);
+}
+
+>>>.ui-slider {
+    top: 5px;
+}
+
+>>>.ui-slider .ui-slider-range {
+    background-color: rgb(92, 184, 92) !important;
+}
+
+>>>.ui-slider .ui-slider-handle {
+    background: none;
+    background-color: rgb(92, 184, 92);
+    border-radius: 10px;
+    width: 15px !important;
+    height: 15px !important;
+}
+
+>>>.ui-rating-star a span {
+    font-size: 2rem !important;
+}
+
+>>>.ui-rating .ui-rating-star-on a {
+    color: rgb(92, 184, 92);
+}
+
+.book-image {
+    max-height: 15rem;
+}
+
+.book-container {
+    width: 40rem;
+    padding: 2rem;
+    max-height: 24rem;
+}
+
+.book-title {
+    height: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

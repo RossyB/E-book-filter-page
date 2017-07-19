@@ -5,7 +5,7 @@
     "price": "6.00",
     "bookImageUrl": "https://i3.helikon.bg/products/5841/31/10000003315841/10000003315841z.jpg",
     "genre": "Фентъзи",
-    "rating": "3.5"
+    "rating": "3"
 }, {
     "title": "Тайните на безсмъртния Никола Фламел: Магьосникът",
     "author": "Майкъл Скот",
@@ -21,7 +21,7 @@
     "price": "11.95",
     "bookImageUrl": "https://i1.helikon.bg/products/3768/64/643768/643768z.jpg",
     "genre": "Фентъзи",
-    "rating": "2.8"
+    "rating": "2"
 }, {
     "title": "Гроб за двама",
     "author": "Джеймс Хадли Чейс",
@@ -29,7 +29,7 @@
     "price": "7.00",
     "bookImageUrl": "https://i4.helikon.bg/products/8189/00/10000000008189/10000000008189z.jpg",
     "genre": "Драма",
-    "rating": "3.2"
+    "rating": "3"
 }, {
     "title": "Чудото в Поскокова Драга",
     "author": "Анте Томич",
@@ -37,7 +37,7 @@
     "price": "7.00",
     "bookImageUrl": "https://i1.helikon.bg/products/8798/35/10000002358798/10000002358798z.jpg",
     "genre": "Драма",
-    "rating": "4.6"
+    "rating": "4"
 }, {
     "title": "Бригадата 3: Живот след смъртта",
     "author": "Александър Белов",
@@ -45,7 +45,7 @@
     "price": "7.00",
     "bookImageUrl": "https://i1.helikon.bg/products/0299/00/10000000000299/10000000000299_b.jpg",
     "genre": "Трилър",
-    "rating": "4.00"
+    "rating": "4"
 }, {
     "title": "Бригадата 5: Целувката на Темида",
     "author": "Александър Белов",
@@ -53,7 +53,7 @@
     "price": "7.00",
     "bookImageUrl": "https://i2.helikon.bg/products/0324/00/10000000000324/10000000000324_b.jpg",
     "genre": "Трилър",
-    "rating": "4.30"
+    "rating": "5"
 }, {
     "title": "Кучето",
     "author": "Васил Кинов",
@@ -61,7 +61,7 @@
     "price": "4.00",
     "bookImageUrl": "https://i2.helikon.bg/products/0039/00/10000000000039/10000000000039_b.jpg",
     "genre": "Романи",
-    "rating": "2.50"
+    "rating": "2"
 }, {
     "title": "Кучето",
     "author": "Васил Кинов",
@@ -69,5 +69,5 @@
     "price": "4.00",
     "bookImageUrl": "https://i2.helikon.bg/products/0039/00/10000000000039/10000000000039_b.jpg",
     "genre": "Романи",
-    "rating": "2.50"
+    "rating": "2"
 }]
