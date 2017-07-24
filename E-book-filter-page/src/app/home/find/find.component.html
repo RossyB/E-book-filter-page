@@ -59,12 +59,12 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>{{resultTitle}}</h2>
-                <h4>{{resultSubtitle}}</h4>
+                <h4>{{books.length}} {{resultSubtitle}}</h4>
             </div>
         </div>
         <div class="row">
             <div class="books-container">
-                <div class="col-md-2 float-left text-center book-container" *ngFor="let book of (books)">
+                <div class="col-md-2 float-left text-center book-container" *ngFor="let book of (books | priceFilter)">
                     <img class="book-image" src="{{book.bookImageUrl}}" alt="">
                     <h4 class="book-title">{{book.title}}</h4>
                     <div>{{book.price}} лв.</div>

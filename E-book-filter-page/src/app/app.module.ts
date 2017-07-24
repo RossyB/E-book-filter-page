@@ -1,14 +1,16 @@
-import { SliderModule, RatingModule } from 'primeng/primeng';
+import { BookService } from './services/book.service';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { SliderModule, RatingModule } from 'primeng/primeng';
+
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FindComponent } from './find/find.component';
-import { PriceFilterPipe } from './pipes/price-filter.pipe';
+import { HeaderComponent } from './home/header/header.component';
+import { FindComponent } from './home/find/find.component';
+import { PriceFilterPipe } from './home/pipes/price-filter.pipe';
 
 
 @NgModule({
@@ -25,7 +27,7 @@ import { PriceFilterPipe } from './pipes/price-filter.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [ ],
+  providers: [ BookService ],
   bootstrap: [ AppComponent ],
 })
 export class AppModule { }
