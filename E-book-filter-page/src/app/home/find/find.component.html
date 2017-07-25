@@ -1,13 +1,13 @@
 <div class="container-fluid">
     <div class="wall">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12">
                 <h2>{{genreTitle}}</h2>
                 <h4>{{genreSubtitle}}</h4>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 btn-group" data-toggle="buttons">
+            <div class="col-md-12">
                 <div class="btn btn-success" *ngFor="let genre of genres">
                     <p-checkbox name="groupname" value="{{genre.name}}" label="{{genre.name}}" [(ngModel)]="selectedGenres" (onChange)="handleCheckboxCange($event)"></p-checkbox>
                 </div>
@@ -15,20 +15,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
             <div class="wall">
                 <h2>{{priceTitle}}</h2>
                 <h4>{{priceSubtitle}}</h4>
                 <p-slider [(ngModel)]="rangeValues" [range]="true" (onSlideEnd)="handleChange($event)"></p-slider>
                 <div class="row justify-content-between">
-                    <div class="col-md-2 price-val">{{minPrice}} лв</div>
-                    <div class="col-md-2 price-val text-right">{{maxPrice}} лв</div>
+                    <div class="col-6 price-val text-left">{{minPrice}} лв</div>
+                    <div class="col-6 price-val text-right">{{maxPrice}} лв</div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="wall">
+        <div class="col-md-6 col-sm-12">
+            <div class="rating-wall">
                 <h2>{{ratingTitle}}</h2>
                 <h4>{{ratingSubtitle}}</h4>
                 <p-rating [(ngModel)]="rating" (onRate)="handleRate($event)" (onCancel)="clearRate($event)"></p-rating>
@@ -39,14 +39,14 @@
 
     <div class="wall">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12">
                 <h2>{{resultTitle}}</h2>
                 <h4>{{books.length}} {{resultSubtitle}}</h4>
             </div>
         </div>
         <div class="row">
             <div class="books-container">
-                <div class="col-md-2 float-left text-center book-container" *ngFor="let book of (books | priceFilter:minPrice:maxPrice | ratingFilter:rating )">
+                <div class="col-md-3 col-sm-6 text-center book-container" *ngFor="let book of (books | priceFilter:minPrice:maxPrice | ratingFilter:rating | genreFilter:selectedGenres)">
                     <img class="book-image" src="{{book.bookImageUrl}}" alt="">
                     <h4 class="book-title">{{book.title}}</h4>
                     <div>{{book.price}} лв.</div>

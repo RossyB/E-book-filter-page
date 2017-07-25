@@ -4,6 +4,6 @@ export class BookModel{
     description: string;
     price: string;
     bookImageUrl: string;
-    genre: string[];
+    genre: string;
     rating: string;
 }
