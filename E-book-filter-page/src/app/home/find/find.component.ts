@@ -1,6 +1,6 @@
 import { PriceFilterPipe } from './../pipes/price-filter.pipe';
 import { BookService } from './../../services/book.service';
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, ViewChildren } from '@angular/core';
 import { BookModel } from './../../models/book';
 import { Observable } from 'rxjs/Rx';
 import { Http } from '@angular/http';
@@ -14,7 +14,11 @@ import { SliderModule, RatingModule, CheckboxModule } from 'primeng/primeng';
   styleUrls: ['./find.component.css'],
   providers: [SliderModule, RatingModule, CheckboxModule],
 })
+
 export class FindComponent implements OnInit, OnChanges {
+
+  @ViewChildren('myItems') createdItems;
+
   public genreTitle: string;
   public genreSubtitle: string;
   public priceTitle: string;
@@ -32,17 +36,14 @@ export class FindComponent implements OnInit, OnChanges {
   public genres: Object[];
   public selectedGenres : string[];
 
-  constructor(private bookService : BookService) {
-   }
+  constructor(private bookService : BookService) {}
 
-     getBooks(): void {
-      this.bookService.getBooks()
-      .subscribe(data => {this.books = data;
-      console.log(this.books);
-      });      
+  getBooks(): void {
+    this.bookService.getBooks()
+    .subscribe(data => {this.books = data;
+    console.log(this.books);
+    });      
   }
-
-
 
   ngOnChanges(){
     this.getBooks();
@@ -70,17 +71,19 @@ export class FindComponent implements OnInit, OnChanges {
   handleChange(e) {
     this.minPrice = this.rangeValues[0];
     this.maxPrice = this.rangeValues[1];
-    console.log(this.rangeValues);
   }
 
   handleRate(e){
-    console.log(this.rating)
   }
+
   clearRate(e){
-    console.log(this.rating)
   }
+
   handleCheckboxCange(){
-    console.log(this.selectedGenres)
+  }
+
+  ngAfterViewInit() {
+  console.log(this.createdItems);
   }
 }
 
