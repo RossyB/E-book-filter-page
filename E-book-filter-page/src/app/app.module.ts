@@ -6,13 +6,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { SliderModule, RatingModule } from 'primeng/primeng';
+import { SliderModule, RatingModule, CheckboxModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './home/header/header.component';
 import { FindComponent } from './home/find/find.component';
 import { PriceFilterPipe } from './home/pipes/price-filter.pipe';
 import { RatingFilterPipe } from './home/pipes/rating-filter.pipe';
+import { GenreFilterPipe } from './home/pipes/genre-filter.pipe';
 
 
 @NgModule({
@@ -22,11 +23,13 @@ import { RatingFilterPipe } from './home/pipes/rating-filter.pipe';
     FindComponent,
     PriceFilterPipe,
     RatingFilterPipe,
+    GenreFilterPipe,
   ],
   imports: [
     BrowserModule,
     SliderModule,
     RatingModule,
+    CheckboxModule,
     FormsModule,
     HttpModule,
     ReactiveFormsModule,

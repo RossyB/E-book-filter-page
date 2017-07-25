@@ -1,12 +1,6 @@
 .btn {
-    display: inline-flex;
     margin: 5px;
     border-radius: 5px !important;
-}
-
-span {
-    margin-left: 5px;
-    margin-right: -5px;
 }
 
 .wall {
@@ -20,6 +14,10 @@ span {
     margin-top: 10px;
     font-weight: bold;
     color: rgb(92, 184, 92);
+}
+
+>>>.ui-chkbox-label {
+    display: initial;
 }
 
 >>>.ui-slider {
@@ -44,6 +42,21 @@ span {
 
 >>>.ui-rating .ui-rating-star-on a {
     color: rgb(92, 184, 92);
+}
+
+>>>.ui-chkbox-icon {
+    color: #d6d6d6;
+    background-color: rgb(92, 184, 92);
+}
+
+>>>.ui-chkbox .ui-chkbox-box {
+    background-color: rgb(92, 184, 92);
+}
+
+>>>.ui-chkbox-box.ui-state-active,
+.ui-radiobutton-box.ui-state-active {
+    border: 1px solid #449d44;
+    background-color: #449d44;
 }
 
 .book-image {

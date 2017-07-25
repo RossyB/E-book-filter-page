@@ -8,9 +8,9 @@
         </div>
         <div class="row">
             <div class="col-md-12 btn-group" data-toggle="buttons">
-                <label class="btn btn-success" *ngFor="let genre of genres; let i = index">
-      	          <input type="checkbox" [ngModel]="value" (ngModelChange)="onChange($event, value)" NgModel> {{genre.name}} <span aria-hidden="true">&times;</span>
-                </label>
+                <div class="btn btn-success" *ngFor="let genre of genres">
+                    <p-checkbox name="groupname" value="{{genre.name}}" label="{{genre.name}}" [(ngModel)]="selectedGenres" (onChange)="handleCheckboxCange($event)"></p-checkbox>
+                </div>
             </div>
         </div>
     </div>
