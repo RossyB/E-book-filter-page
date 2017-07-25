@@ -7,8 +7,10 @@ import { Pipe, PipeTransform, Injectable } from '@angular/core';
 @Injectable()
 export class PriceFilterPipe implements PipeTransform {
 
-  transform(books: BookModel[], minPrice: number = 6, maxPrice: number = 100): any {
-    debugger;
-    return books.filter(book => {minPrice <= +book.price && +book.price <= maxPrice})
+  transform(books: BookModel[], minPrice: number = 0, maxPrice: number = 100): any {
+    if (books){
+      let filtredBooks = books.filter(book => +book.price >= minPrice && +book.price <= maxPrice)
+      return filtredBooks;
+    }
   }
 }

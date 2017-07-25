@@ -1,3 +1,4 @@
+import { FormGroup } from '@angular/forms';
 import { PriceFilterPipe } from './../pipes/price-filter.pipe';
 import { BookService } from './../../services/book.service';
 import { Component, OnInit, OnChanges } from '@angular/core';
@@ -6,6 +7,7 @@ import { Observable } from 'rxjs/Rx';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+import { NgForm } from '@angular/forms'
 import { SliderModule, RatingModule } from 'primeng/primeng';
 @Component({
   selector: 'app-find',
@@ -28,10 +30,11 @@ export class FindComponent implements OnInit, OnChanges {
   public minPrice: number;
   public maxPrice: number;
   public filtredBooks: BookModel[];
+  public genres: Object[];
+  public form: FormGroup;
+
 
   constructor(private bookService : BookService) {
-    //this.books = [];
-    //this.filtredBooks = [];
    }
 
      getBooks(): void {
@@ -41,12 +44,15 @@ export class FindComponent implements OnInit, OnChanges {
       });      
   }
 
+
+
   ngOnChanges(){
     this.getBooks();
   }
   
   ngOnInit() {
     this.books = [];
+    this.genres = [{ id: 1, name: 'Фентъзи' }, { id: 2, name: 'Драма' }, { id: 3, name: 'Трилър' }, { id: 4, name: 'Романи' },  { id: 5, name: 'Художествена литература' }, { id: 6, name: 'Исторически' },  { id: 6, name: 'Научна литература' }  ]
     this.genreTitle = 'Жанр';
     this.genreSubtitle = 'Кликнете на един или повече жанрове за да ги изберете.';
     this.priceTitle = 'Цена'
@@ -60,7 +66,6 @@ export class FindComponent implements OnInit, OnChanges {
     this.resultTitle = 'Резултати';
     this.resultSubtitle = 'резултата';
     this.getBooks();
-    console.log(this.books);
   }
 
   handleChange(e) {
@@ -74,6 +79,10 @@ export class FindComponent implements OnInit, OnChanges {
   }
   clearRate(e){
     console.log(this.rating)
+  }
+  onChange(e) {
+    debugger;
+    console.log('Event');
   }
 
 }
